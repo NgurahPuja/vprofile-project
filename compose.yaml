@@ -1,8 +1,7 @@
-version: '2.30.1'
 services:
   vprodb:
     build:
-      context: ./Docker-files/db/Dockerfile
+      context: ./Docker-files/db
     image: ngurah/vprofiledb
     container_name: vprodb
     ports:
@@ -28,7 +27,7 @@ services:
   
   vproapp:
     build:
-      context: ./Docker-files/app/Dockerfile
+      context: ./Docker-files/app
     image: ngurah/vprofileapp
     container_name: vproapp
     ports:
@@ -38,9 +37,9 @@ services:
   
   vproweb:
     build:
-      context: ./Docker-files/web/Dockerfile
+      context: ./Docker-files/web
     image: ngurah/vprofileweb
-    container_name: vproapp
+    container_name: vproweb
     ports:
       - "80:80"
 
