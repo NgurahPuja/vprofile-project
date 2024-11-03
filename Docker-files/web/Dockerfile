@@ -1,6 +1,6 @@
 FROM nginx
 LABEL "Project"="Vprofile"
-LABEL "Author"="Imran"
+LABEL "Author"="Puja"
 
-RUN rm -rf /etc/nginx/conf.d/default.conf
-COPY nginvproapp.conf /etc/nginx/conf.d/vproapp.conf
+RUN rm -rf /etc/nginx/nginx.conf
+COPY nginvproapp.conf /etc/nginx/vproapp.conf
